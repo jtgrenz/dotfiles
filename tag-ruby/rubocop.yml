@@ -1,0 +1,11 @@
+inherit_from:
+  - http://shopify.github.io/ruby-style-guide/rubocop.yml
+# AllCops:
+#   TargetRubyVersion: 2.3.3
+
+# Style/StringLiterals:
+#   EnforcedStyle: single_quotes
+
+
+Lint/UnneededCopDisableDirective:
+   Enabled: true

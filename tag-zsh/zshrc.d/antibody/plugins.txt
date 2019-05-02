@@ -1,0 +1,4 @@
+zsh-users/zsh-autosuggestions
+buonomo/yarn-completion
+bhilburn/powerlevel9k
+zsh-users/zsh-syntax-highlighting

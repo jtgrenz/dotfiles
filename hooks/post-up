@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+source ~/.zshrc
+
+# bundle and statically source all the plugins listed in $ZSH_CONFIG/antibody/plugins.txt
+antibody static
+

@@ -1,0 +1,1 @@
+Host specific config files are added here. `zshrc` will source any files added here if they match the current host name. Generally, the host specific files should not be added here in the dot files, but added to `host-$HOSTNAME` in the dotfiles directory. `rcm`'s `rcup` command will link the `host-$HOSTNAME/zshrc.d/host/$HOSTNAME` file to the copied `zshrc.d/host/` directory.

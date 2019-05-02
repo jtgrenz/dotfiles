@@ -1,0 +1,10 @@
+# ZShell Configuration
+# Host: Magi-06.local
+#
+# This .zshrc file is managed by the antibody plugin manager and is purposly
+# kept modular.
+
+export DOTFILES="$HOME/dotfiles_v2"
+export ZSH_CONFIG="$DOTFILES/tag-zsh/zshrc.d"
+
+source "$ZSH_CONFIG/init.zsh"

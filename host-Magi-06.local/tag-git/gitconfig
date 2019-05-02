@@ -1,0 +1,39 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[user]
+	name = Jon G
+	email = jon.g@shopify.com
+	signingkey = 1FBB1F2FAC6D095B
+[core]
+	excludesfile = /Users/jongrenning/.gitignore_global
+	editor = vim
+	autocrlf = input
+	hookspath = /Users/jongrenning/.dotfiles/githooks
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[commit]
+	gpgsign = true
+[push]
+	default = current
+[gui]
+	recentrepo = /Users/jongrenning/Development/Shopify/shopify
+[diff]
+	algorithm = patience
+[protocol]
+	version = 2
+[credential]
+	helper = osxkeychain
