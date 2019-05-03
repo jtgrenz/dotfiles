@@ -4,6 +4,6 @@
 # kept modular.
 
 export DOTFILES="$HOME/dotfiles_v2"
-export ZSH_CONFIG="$DOTFILES/tag-zsh/zshrc.d"
+export ZSH_CONFIG="$HOME/.zshrc.d"
 
 source "$ZSH_CONFIG/init.zsh"

@@ -9,7 +9,7 @@
 	excludesfile = /Users/jongrenning/.gitignore_global
 	editor = vim
 	autocrlf = input
-	hookspath = /Users/jongrenning/.dotfiles/githooks
+	hookspath = /Users/jongrenning/.githooks
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =

@@ -1,0 +1,22 @@
+.gem/*
+.nvm/*
+.npm/*
+.bundle/*
+.Trash/
+.vscode/extensions/*
+Trash/
+Library/Caches/*
+*/Cache*
+*/tmp/*
+*/cache/*
+.cache/*
+Development/*/cache*
+Development/Shopify/*
+node_modules/*
+*/node_modules/
+CBB_Magi-05.local/*
+Library/Application\ Support/Google/DriveFS/*
+.opam/*
+.DriveFS/*
+.cargo/*
+Documents/Photos/*

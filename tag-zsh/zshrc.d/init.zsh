@@ -7,7 +7,7 @@
 #
 
 export DOTFILES="$HOME/dotfiles_v2"
-export ZSH_CONFIG="$DOTFILES/tag-zsh/zshrc.d"
+export ZSH_CONFIG="$HOME/.zshrc.d"
 local  INIT="$ZSH_CONFIG/initializers"
 local  ANTIBODY="$ZSH_CONFIG/antibody"
 
@@ -31,21 +31,21 @@ source $ANTIBODY/plugins_static.zsh         # load antibody plugins set in $ANTI
 
 # Load all custom functions.
 if [ -d $ZSH_CONFIG/functions ]; then
-  for file in $ZSH_CONFIG/functions/**.zsh; do
+  for file in $ZSH_CONFIG/functions/**/*.zsh; do
     source $file
   done
 fi
 
 # Load all first party plugins not added with antibody
 if [ -d $ZSH_CONFIG/plugins ]; then
-  for file in $ZSH_CONFIG/plugins/**.zsh; do
+  for file in $ZSH_CONFIG/plugins/**/*.zsh; do
     source $file
   done
 fi
 
 # Load all host specific files
 if [ -d $ZSH_CONFIG/host ]; then
-  for file in $ZSH_CONFIG/host/**.zsh; do
+  for file in $ZSH_CONFIG/host/**/*.zsh; do
     source $file
   done
 fi
