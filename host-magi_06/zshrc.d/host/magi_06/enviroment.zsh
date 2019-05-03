@@ -1,7 +1,7 @@
 
 ## import local secrets to enviroment
 if [[ -f $ZSH_CONFIG/secrets.zsh ]]; then
-    source ZSH_CONFIG/secrets.zsh
+    source $ZSH_CONFIG/secrets.zsh
 fi
 
 # Load shopify dev tool
