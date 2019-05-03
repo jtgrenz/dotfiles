@@ -34,6 +34,20 @@ if [[ $? != 0 ]] ; then
     # Install rcm
     echo "Thoughtbot's rcm not found. Installing rcm"
    brew install rcm
+else
+    echo "Thoughtbot's rcm  found."
+fi
+echo
+
+# Install Antibody, the zsh plugin manager.
+echo "Antibody zsh plugin manager"
+antibody -v
+if [[ $? != 0 ]] ; then
+    # Install rcm
+    echo "Antibody not found. Installing rcm"
+    brew install getantibody/tap/antibody
+else
+    echo "Antibody found."
 fi
 echo
 
