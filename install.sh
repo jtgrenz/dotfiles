@@ -65,4 +65,4 @@ echo
 # Finally, run rcup, to symlink dotfiles to home directory.
 echo "Linking dotfiles with rcup..."
 rcup
-echo "Install complete"
+echo "Install complete. Open a new shell to reload"

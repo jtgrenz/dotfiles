@@ -6,7 +6,7 @@
 # to keep the setup as organized as possible
 #
 
-export DOTFILES="$HOME/dotfiles_v2"
+export DOTFILES="$HOME/.dotfiles"
 export ZSH_CONFIG="$HOME/.zshrc.d"
 local  INIT="$ZSH_CONFIG/initializers"
 local  ANTIBODY="$ZSH_CONFIG/antibody"

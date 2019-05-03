@@ -91,8 +91,10 @@ shopify_master_status() {
   if [ $(pwd) = '/Users/jongrenning/Development/Shopify/shopify' ]; then
     local buildstatus=$(curl -s $SHOPIFY_MASTER_BUILD_STATUS)
     local color='%F{yellow}'
-    [ $buildstatus = '{"status":"passing"}' ] && color='%F{green}'
-    [ $buildstatus = '{"status":"failing"}' ] && color='%F{red}'
+    if [ ! -z "$buildstatus" ]; then
+      [ $buildstatus = '{"status":"passing"}' ] && color='%F{green}'
+      [ $buildstatus = '{"status":"failing"}' ] && color='%F{red}'
+    fi
     echo -n "%{$color%}\ue729" # \ue729 is 
   fi
 }

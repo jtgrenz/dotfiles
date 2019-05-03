@@ -10,7 +10,7 @@ This repo uses [ThoughtBot's RCM](https://github.com/thoughtbot/rcm) dot file ma
 clone the repo to your home directory and run
 
 ```sh
-cd ~/dotfiles_v2 && sh install.sh
+cd ~/dotfiles && sh install.sh
 ```
 
 and voila!
@@ -19,7 +19,7 @@ and voila!
 
 The `install.sh` script copies `rcrc` to you home folder, installs `rcm` using homebrew (and installs homebrew if necessary) and then runs `rcup`. `rcup` is the rcm command that links everything from the repo into your home directory based on the settings listed in `rcrc`.
 
-The repo is broken up into 2 main categories of folders, `tag-*` and `host-*`. The `rcrc` file specifies a `TAG` and a `HOSTNAME` variable. Every tag listed in the `rcrc` file will be symlinked to the home directory, but if not listed, it will be ignored. This allows you to pick and choose what files you want to include in the setup. The `host-*` directories work similarly and will be copied over if the hostname of the machine matches `*` portion of the directory name. You can force the host to be copied over by running `rcup -B HOSTNAME` Ie `rcup -B magi_06` which is the name of my current machine. If a file is shared between this bare repo, `tag-*`, or `host-*`, then it will be overridden by the next file up in the chain. Host trumps Tag, Tag trumps bare files in the repo.
+The repo is broken up into 2 main categories of folders, `tag-*` and `host-*`. The `rcrc` file specifies a `TAG` and a `HOSTNAME` variable. Every tag listed in the `rcrc` file will be symlinked to the home directory, but if not listed, it will be ignored. This allows you to pick and choose what files you want to include in the setup. The `host-*` directories work similarly and will be copied over if the hostname of the machine matches `*` portion of the directory name. You can force the host to be copied over by running `rcup -B HOSTNAME` Ie `rcup -B Magi06.local` which is the name of my current machine. If a file is shared between this bare repo, `tag-*`, or `host-*`, then it will be overridden by the next file up in the chain. Host trumps Tag, Tag trumps bare files in the repo.
 
 ## Zsh
 

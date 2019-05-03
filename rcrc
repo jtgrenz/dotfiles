@@ -1,5 +1,4 @@
-DOTFILES_DIRS="$HOME/dotfiles_v2"
+DOTFILES_DIRS="$HOME/.dotfiles"
 TAGS="zsh git iterm2 tmux vim ruby"
-HOSTNAME="magi-06"
 SYMLINK_DIRS=""
-EXCLUDES="*.sample lib/* install.sh"
+EXCLUDES="*.sample lib/* install.sh *.md"

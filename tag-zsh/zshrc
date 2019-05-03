@@ -3,7 +3,7 @@
 # This .zshrc file is managed by the antibody plugin manager and is purposly
 # kept modular.
 
-export DOTFILES="$HOME/dotfiles_v2"
+export DOTFILES="$HOME/.dotfiles"
 export ZSH_CONFIG="$HOME/.zshrc.d"
 
 source "$ZSH_CONFIG/init.zsh"
