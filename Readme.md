@@ -10,7 +10,7 @@ This repo uses [ThoughtBot's RCM](https://github.com/thoughtbot/rcm) dot file ma
 clone the repo to your home directory and run
 
 ```sh
-cd ~/dotfiles && sh install.sh
+cd ~/.dotfiles && sh install.sh
 ```
 
 and voila!
