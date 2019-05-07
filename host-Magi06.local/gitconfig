@@ -37,3 +37,5 @@
 	version = 2
 [credential]
 	helper = osxkeychain
+[alias]
+	sync = !zsh -ic git-update-master

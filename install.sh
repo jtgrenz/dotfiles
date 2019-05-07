@@ -65,4 +65,12 @@ echo
 # Finally, run rcup, to symlink dotfiles to home directory.
 echo "Linking dotfiles with rcup..."
 rcup
+
+if echo "$SHELL" | grep -q "zsh"; then
+    echo "zsh already active."
+else
+    echo "Changign shell to zsh. You will need to enter your password."
+    chsh -s /bin/zsh
+fi
+
 echo "Install complete. Open a new shell to reload"

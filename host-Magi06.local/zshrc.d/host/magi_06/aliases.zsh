@@ -7,6 +7,7 @@ alias getCheckout="curl -H 'Authorization: token $SHOPIFY_GITHUB_TOKEN' -H 'Acce
 
 alias "devup!"="git checkout master && git pull && dev up"
 alias "devs!"="devup! && dev s"
-# unalias "mysql"
 
-alias komodo='open -a "Komodo Edit 11"'
+# rebase shopify/shopify against the latest green master. Must be in repo
+alias rebasegreenmaster='git rebase $(./script/ci_last_green_master)'
+

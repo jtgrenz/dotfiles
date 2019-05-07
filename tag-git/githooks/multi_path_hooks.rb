@@ -1,5 +1,37 @@
 #!/usr/bin/ruby --disable-gems
 
+####### MultiPathHooks #######
+# Note: This method of using a global set of githooks requires git 2.9 or higher
+#
+# Problem: You have a set of githooks you wish to run on all repos, but also
+# work on share repos that already have githooks. You don't want to force others
+# to use your hooks, but you also want to use the supplied hooks in the shared repo.
+#
+# By setting `git config --global core.hookpath` to this directory, git will no
+# longer look in the .git/hooks directory of your project. By symlinking all hooks
+# in this .gitooks directory to this module, you are able to run both local repo's hooks
+# as well as global hooks.
+#
+# This module will detect the current hook being triggered and then look for a
+# directory in the global hooks directory matching the hook's name plus `.d`. It
+# will then run all the files in that directory and then run any matching hook
+# scripts in the repo's .git/hooks directory.
+#
+####### Example ########
+#
+# Your repo is ~/Jon/code/my_repo and you just tried to commit. This will trigger
+# the pre-commit hook. Normally, git will look for a file called `
+# ~/Jon/code/my_repo/.git/hooks/pre-commit` to run. But having set
+# `git config --global core.hookpath ~/.githooks`, git will instead run `~/.githooks/pre-commit`.
+# `~/.githooks/pre-commit` is symlinked to this ruby module and this script runs. This script will
+# look for a directory called `~/.githooks/pre-commit.d` and it will execute every script in that directory,
+# if it exists. Next, it will execute ~/Jon/code/my_repo/.git/hooks/pre-commit if it exists.
+#
+# Assuming the exit code for all scripts in ~/.githooks/pre-commit.d and
+# ~/Jon/code/my_repo/.git/hooks/pre-commit were sucessful, your commit completes.
+#
+
+
 module MultiPathHooks
   extend self
 
