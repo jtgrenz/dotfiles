@@ -11,3 +11,5 @@ alias "devs!"="devup! && dev s"
 # rebase shopify/shopify against the latest green master. Must be in repo
 alias rebasegreenmaster='git rebase $(./script/ci_last_green_master)'
 
+# open vimrc from wherever
+alias vimrc="vim $HOME/.vimrc"

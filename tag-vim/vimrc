@@ -1,6 +1,100 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible " required
+filetype off     " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugin list
+
+Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
+
+Plugin 'joshdick/onedark.vim'           " AtomOneDark vim theme
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-rails'                " vim-rails
+Plugin 'tpope/vim-fugitive'             " git integration
+Plugin 'airblade/vim-gitgutter'         " marks lines changed in the gutter
+Plugin 'scrooloose/nerdtree'            " tree based file browser side bar
+Plugin 'w0rp/ale'                       " Async Lint Engine. Lints code as you type.
+set rtp+=/usr/local/opt/fzf             " Load fzf from homebrew
+Plugin 'junegunn/fzf.vim'               " Load fzf vim wrapper
+"Plugin 'ctrlpvim/ctrlp.vim'             " Control+P Fuzzy searc 
+Plugin 'sudar/comments.vim'              "comment code block
+Plugin 'ryanoasis/vim-devicons'         " Dev icons
+Plugin 'vim-ruby/vim-ruby'
+
+call vundle#end()  " required
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin Settings 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree
+" Map NERDTree to crtl-b (like vscode)
+map <C-b> :NERDTreeToggle<CR>
+" Check if NERDTree is open or active
+function! IsNERDTreeOpen()        
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call SyncTree()
+
+
+
+" Open NERDTree automatically when vim starts opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
+" => Airline
+let g:airline_theme='onedark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#tab_min_count = 0
+
+" => FzF
+" Launch fuzzy finder with control p
+noremap <C-p> :FZF<CR>                  
+
+" => ALE 
+" g:ale_set_balloons=1
+
+" => CtrlP 
+"let g:ctrlp_match_window = 'min:4,max:10,results=100'
+"if exists("g:ctrl_user_command")
+  "unlet g:ctrlp_user_command
+"endif
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
+"let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+"if executable('ag')
+  "" Use Ag over Grep
+  "set grepprg=ag\ --nogroup\ --nocolor
+
+  "" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap leader
+let mapleader = "\<Space>"
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
@@ -9,11 +103,24 @@ filetype plugin on
 filetype indent on
 
 " Set to auto read when a file is changed from the outside
-set autoread
-
+:set autoread | au CursorHold * checktime 
 
 "Always show current position
 set ruler
+set colorcolumn=80,120
+
+
+" Show hybrid line numbers
+" When in normal mode/buffer loses focus show relative line number
+" When in insert mode or buffer gains focus, show absolute line numbers
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+" end hybrid line numbers
 
 " Ignore case when searching
 set ignorecase
@@ -27,12 +134,19 @@ set hlsearch
 " Show matching brackets when text indicator is over them
 set showmatch
 
+" hightlight current line
+set cursorline
 
 syntax enable
 
+" Enabled 24-bit TrueColor
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
 
-colorscheme desert
-set background=dark
+colorscheme onedark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -47,6 +161,21 @@ set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+
+" visual autocomplete for command menu
+set wildmenu
+
+" hotreload vimrc
+nnoremap <leader>rv :source $MYVIMRC<CR>
+
+" Save like a mac!
+map <D-s> :w<CR>
+
+" Copy to the selection to the clipboard
+noremap <leader>y "+y
+" Copy entire file to clipboard
+nnoremap <leader>gy gg"+yG
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -69,6 +198,9 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+" remap shift tab to tab backwards
+nnoremap <S-Tab> << 
+inoremap <S-Tab> <C-d>
 
 " Linebreak on 500 characters
 set lbr
@@ -86,7 +218,22 @@ set wrap "Wrap lines
 map j gj
 map k gk
 
+" Tabs
+nnoremap H :tabnext<CR> 
+nnoremap L :tabprev<CR> 
+nnoremap T :tabnew<CR>
 
+" nnoremap th :tabfirst<CR>
+" nnoremap tl :tablast<CR>
+
+" Open splits below and to the right
+set splitbelow
+set splitright
+
+
+set hidden
+nnoremap <C-M> :bnext<CR>
+nnoremap <C-N> :bprev<CR>
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -94,14 +241,11 @@ map k gk
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-
 " Disable arrow movement, resize splits instead.
 if get(g:, 'elite_mode')
-	nnoremap <Up>    :resize +2<CR>
-	nnoremap <Down>  :resize -2<CR>
-	nnoremap <Left>  :vertical resize +2<CR>
-	nnoremap <Right> :vertical resize -2<CR>
+    nnoremap <Up>    :resize +2<CR>
+    nnoremap <Down>  :resize -2<CR>
+    nnoremap <Left>  :vertical resize +2<CR>
+    nnoremap <Right> :vertical resize -2<CR>
 endif
 

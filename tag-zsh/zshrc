@@ -7,3 +7,8 @@ export DOTFILES="$HOME/.dotfiles"
 export ZSH_CONFIG="$HOME/.zshrc.d"
 
 source "$ZSH_CONFIG/init.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
