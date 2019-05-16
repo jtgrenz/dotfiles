@@ -1,2 +1,3 @@
 */**/antibody/plugins_static.zsh
-*.**/secrets.zsh
+*/**/secrets.zsh
+*/**/.netrwhist
