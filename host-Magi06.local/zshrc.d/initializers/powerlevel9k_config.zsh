@@ -7,7 +7,7 @@
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir custom_shopify_master_status vcs vi_mode_joined )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(chruby nvm node_version pyenv context background_jobs custom_tmux)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(chruby node_version pyenv context background_jobs custom_tmux)
 
 # Context
 DEFAULT_USER=$USER
@@ -103,15 +103,15 @@ POWERLEVEL9K_CUSTOM_SHOPIFY_MASTER_STATUS="shopify_master_status"
 POWERLEVEL9K_CUSTOM_SHOPIFY_MASTER_STATUS_BACKGROUND="clear"
 
 
-# Tmux 
+# Tmux
 
 tmux_session() {
-    if [[ -n "${TMUX+set}" ]]; then 
+    if [[ -n "${TMUX+set}" ]]; then
         local sessionid=$(tmux display-message -p "#S")
         local color='%F{yellow}'
         echo -n "%{$color%}\uf489 $sessionid"
     fi
 }
- 
+
 POWERLEVEL9K_CUSTOM_TMUX="tmux_session"
 POWERLEVEL9K_CUSTOM_TMUX_BACKGROUND="clear"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>git_pull_master</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/jongrenning/.cron_jobs/git_pull_master.zsh</string>
+	</array>
+	<key>StandardOutPath</key>
+	<string>/tmp/git_pull_master.log</string>
+	<key>StandardErrorPath</key>
+	<string>/tmp/git_pull_master.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>11</integer>
+		<key>Minute</key>
+		<integer>30</integer>
+	</dict>
+</dict>
+</plist>

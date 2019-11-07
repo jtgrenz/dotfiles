@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.plisterine.rsync_time_machine</string>
+	<key>LowPriorityIO</key>
+	<false/>
+	<key>Nice</key>
+	<integer>5</integer>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/sh</string>
+		<string>/Users/jongrenning/.cron_jobs/rsync_timemachine.sh</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/tmp/rsync_time_machine.log</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/rsync_time_machine.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>10</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

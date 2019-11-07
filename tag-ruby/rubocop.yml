@@ -6,6 +6,3 @@ inherit_from:
 # Style/StringLiterals:
 #   EnforcedStyle: single_quotes
 
-
-Lint/UnneededCopDisableDirective:
-   Enabled: true

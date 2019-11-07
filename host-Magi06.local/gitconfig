@@ -10,6 +10,7 @@
 	editor = vim
 	autocrlf = input
 	hookspath = /Users/jongrenning/.githooks
+	commitGraph = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -39,3 +40,10 @@
 	helper = osxkeychain
 [alias]
 	sync = !zsh -ic git-update-master
+[url "https://github.com/Shopify/"]
+	insteadOf = git@github.com:Shopify/
+	insteadOf = git@github.com:shopify/
+	insteadOf = ssh://git@github.com/Shopify/
+	insteadOf = ssh://git@github.com/shopify/
+[gc]
+	writeCommitGraph = true
