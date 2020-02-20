@@ -1,4 +1,5 @@
 zsh-users/zsh-autosuggestions
 buonomo/yarn-completion
-bhilburn/powerlevel9k
+#bhilburn/powerlevel9k
+romkatv/powerlevel10k
 zsh-users/zsh-syntax-highlighting

@@ -19,7 +19,7 @@ function! myspacevim#before() abort
 endfunction
 
 function! myspacevim#after() abort
-  call SpaceVim#mapping#space#def('nnoremap', ['f', 'c'], 'LeaderfTag', 'search ctags', 1)
+  " call SpaceVim#mapping#space#def('nnoremap', ['f', 'c'], 'LeaderfTag', 'search ctags', 1)
 endfunction
 
 

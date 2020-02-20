@@ -1,4 +1,4 @@
 DOTFILES_DIRS="$HOME/.dotfiles"
-TAGS="zsh git iterm2 tmux ruby spacevim"
+TAGS="zsh git iterm2 tmux ruby nvim vim"
 SYMLINK_DIRS=""
 EXCLUDES="*.sample lib/* install.sh *.md"

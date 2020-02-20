@@ -36,10 +36,9 @@
 	algorithm = patience
 [protocol]
 	version = 2
-[credential]
-	helper = osxkeychain
 [alias]
 	sync = !zsh -ic git-update-master
+	logname = !(git-log --name-only)
 [url "https://github.com/Shopify/"]
 	insteadOf = git@github.com:Shopify/
 	insteadOf = git@github.com:shopify/
@@ -47,3 +46,5 @@
 	insteadOf = ssh://git@github.com/shopify/
 [gc]
 	writeCommitGraph = true
+[credential]
+	helper = store --file /opt/dev/var/private/git_credential_store

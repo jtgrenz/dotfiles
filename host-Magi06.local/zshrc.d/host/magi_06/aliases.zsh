@@ -13,3 +13,7 @@ alias rebasegreenmaster='git rebase $(./script/ci_last_green_master)'
 
 # open vimrc from wherever
 alias vimrc="vim $HOME/.vimrc"
+
+alias svim="nvim -u $HOME/.SpaceVim/init.vim"
+
+alias devuf="dev up --only=ruby,bundler,database"

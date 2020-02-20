@@ -6,8 +6,8 @@
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir custom_shopify_master_status vcs vi_mode_joined )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(chruby node_version pyenv context background_jobs custom_tmux)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir custom_shopify_master_status vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time chruby node_version pyenv context background_jobs custom_tmux)
 
 # Context
 DEFAULT_USER=$USER
@@ -56,6 +56,8 @@ POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="yellow"
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="clear"
 POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="yellow"
 
+POWERLEVEL9K_VCS_LOADING_BACKGROUND="clear"
+POWERLEVEL9K_VCS_LOADING_FOREGROUND="grey"
 
 # root_indicator
 POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND="red"
@@ -115,3 +117,26 @@ tmux_session() {
 
 POWERLEVEL9K_CUSTOM_TMUX="tmux_session"
 POWERLEVEL9K_CUSTOM_TMUX_BACKGROUND="clear"
+
+  # Transient prompt works similarly to the builtin transient_rprompt option. It trims down prompt
+  # when accepting a command line. Supported values:
+  #
+  #   - off:      Don't change prompt when accepting a command line.
+  #   - always:   Trim down prompt when accepting a command line.
+  #   - same-dir: Trim down prompt when accepting a command line unless this is the first command
+  #               typed after changing current working directory.
+  typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=off
+
+  # Instant prompt mode.
+  #
+  #   - off:     Disable instant prompt. Choose this if you've tried instant prompt and found
+  #              it incompatible with your zsh configuration files.
+  #   - quiet:   Enable instant prompt and don't print warnings when detecting console output
+  #              during zsh initialization. Choose this if you've read and understood
+  #              https://github.com/romkatv/powerlevel10k/blob/master/README.md#instant-prompt.
+  #   - verbose: Enable instant prompt and print a warning when detecting console output during
+  #              zsh initialization. Choose this if you've never tried instant prompt, haven't
+  #              seen the warning, or if you are unsure what this all means.
+  typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
+
+# GITSTATUS_LOG_LEVEL=DEBUG
