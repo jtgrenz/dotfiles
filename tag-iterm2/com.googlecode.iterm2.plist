@@ -2808,6 +2808,14 @@ Split Vertically with Current Profile</string>
 					<key>Text</key>
 					<string>0x7f</string>
 				</dict>
+				<key>0x4b-0x1e0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>25</integer>
+					<key>Text</key>
+					<string>Clear Buffer
+Clear Buffer</string>
+				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
 					<key>Action</key>
@@ -3622,28 +3630,17 @@ Split Vertically with Current Profile</string>
 			<key>HotKey Activated By Modifier</key>
 			<false/>
 			<key>HotKey Alternate Shortcuts</key>
-			<array>
-				<dict>
-					<key>characters</key>
-					<string></string>
-					<key>charactersIgnoringModifiers</key>
-					<string>H</string>
-					<key>keyCode</key>
-					<integer>4</integer>
-					<key>modifiers</key>
-					<integer>1966080</integer>
-				</dict>
-			</array>
+			<array/>
 			<key>HotKey Characters</key>
-			<string>`</string>
+			<string></string>
 			<key>HotKey Characters Ignoring Modifiers</key>
-			<string>`</string>
+			<string>H</string>
 			<key>HotKey Key Code</key>
-			<integer>50</integer>
+			<integer>4</integer>
 			<key>HotKey Modifier Activation</key>
 			<integer>0</integer>
 			<key>HotKey Modifier Flags</key>
-			<integer>262144</integer>
+			<integer>1966080</integer>
 			<key>HotKey Window Animates</key>
 			<true/>
 			<key>HotKey Window AutoHides</key>
@@ -3722,6 +3719,14 @@ Split Vertically with Current Profile</string>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x7f</string>
+				</dict>
+				<key>0x4b-0x1e0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>25</integer>
+					<key>Text</key>
+					<string>Clear Buffer
+Clear Buffer</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -5034,15 +5039,15 @@ Split Vertically with Current Profile</string>
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.8</string>
-		<string>3.2.9</string>
+		<string>3.3.4</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
+		<string>3.2.9</string>
 		<string>3.3.0</string>
 		<string>3.3.2</string>
-		<string>3.3.4</string>
 	</array>
 	<key>NoSyncAutoBurialReveal</key>
 	<true/>
@@ -5070,7 +5075,7 @@ Split Vertically with Current Profile</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{269, 595}</string>
+		<string>{989, 979}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -5085,7 +5090,7 @@ Split Vertically with Current Profile</string>
 	<key>NoSyncInstallationId</key>
 	<string>3089DB94-E0EE-4A8C-9FC3-131B12B262FF</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>53</integer>
+	<integer>54</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -5920,7 +5925,7 @@ Split Vertically with Current Profile</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-19T15:41:09Z</date>
+	<date>2020-02-26T14:51:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>

@@ -1,0 +1,239 @@
+{
+  "title": "Evoluent Vertical Mouse Custom Config",
+  "rules": [
+    {
+      "description": "Custom config",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "pointing_button": "button6",
+              "modifiers": {
+                "optional": [ "any" ]
+              }
+          },
+          "to": [
+            {
+              "pointing_button": "button6",
+              "modifiers": "left_shift"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        },
+
+
+        {
+          "type": "basic",
+          "from": {
+              "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "pointing_button": "button"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+              "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "keycode": "back"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        },
+
+
+        {
+          "type": "basic",
+          "from": {
+              "pointing_button": "button5"
+          },
+          "to": [
+            {
+              "pointing_button": "button1",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+              "pointing_button": "button4"
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+              "simultaneous": [
+                {
+                  "pointing_button": "button6"
+                },
+                {
+                  "pointing_button": "button1"
+                }
+              ]
+            },
+          "to": [
+            {
+              "key_code": "left",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+              "simultaneous": [
+                {
+                  "pointing_button": "button6"
+                },
+                {
+                  "pointing_button": "button2"
+                }
+              ]
+            },
+          "to": [
+            {
+              "key_code": "right",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+              "simultaneous": [
+                {
+                  "pointing_button": "button6"
+                },
+                {
+                  "pointing_button": "button2"
+                }
+              ]
+            },
+          "to": [
+            {
+              "key_code": "forward"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                    "vendor_id": 6780,
+                    "product_id": 401,
+                    "description": "Evoluent Vertical Mouse Right"
+                }
+              ]
+            }
+          ]
+        }
+
+
+      ]
+    }
+  ]
+}
