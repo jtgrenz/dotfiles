@@ -1,4 +1,9 @@
 require('keyboard') -- Load Hammerspoon bits from https://github.com/jasonrudolph/keyboard
+require('calendarscripts')
+
+local pushToTalk = hs.loadSpoon("PushToTalk")
+pushToTalk:start()
+
 
 --------------------------------
 -- START VIM CONFIG

@@ -11,6 +11,7 @@
 	autocrlf = input
 	hookspath = /Users/jongrenning/.githooks
 	commitGraph = true
+	hookpath = /Users/jongrenning/.dotfiles/tag-git/githooks
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -27,7 +28,7 @@
 	required = true
 	process = git-lfs filter-process
 [commit]
-	gpgsign = true
+	gpgsign = false
 [push]
 	default = current
 [gui]

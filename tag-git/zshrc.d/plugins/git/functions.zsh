@@ -14,3 +14,5 @@ git_current_branch() {
   fi
   echo ${ref#refs/heads/}
 }
+
+git config --global core.hookpath ~/.dotfiles/tag-git/githooks
