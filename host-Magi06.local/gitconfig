@@ -2,7 +2,7 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [user]
-	name = Jon G
+	name = JonG
 	email = jon.g@shopify.com
 	signingkey = 1FBB1F2FAC6D095B
 [core]
@@ -49,4 +49,7 @@
 [gc]
 	writeCommitGraph = true
 [credential]
+	helper = 
 	helper = store --file /opt/dev/var/private/git_credential_store
+[pull]
+	ff = only

@@ -111,7 +111,7 @@ end
 function obj:init()
 end
 
---- PushToTalk:init()
+---     :init()
 --- Method
 --- Starts menu and key watcher
 function obj:start()

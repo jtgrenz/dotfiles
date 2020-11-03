@@ -25,3 +25,4 @@ iterm2_print_user_vars() {
   iterm2_set_user_var ruby_icon $(echo "\uF219")
 }
 
+if [ -e /Users/jongrenning/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jongrenning/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

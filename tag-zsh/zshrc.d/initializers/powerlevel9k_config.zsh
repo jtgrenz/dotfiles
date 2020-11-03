@@ -7,7 +7,7 @@
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir vcs vi_mode_joined )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(chruby nvm node_version pyenv context background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(chruby node_version pyenv context background_jobs)
 
 # Context
 DEFAULT_USER=$USER
