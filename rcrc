@@ -1,4 +1,4 @@
-DOTFILES_DIRS="$HOME/.dotfiles"
+DOTFILES_DIRS="$HOME/dotfiles"
 TAGS="zsh git iterm2 tmux ruby nvim vim hammerspoon keyboard colorls"
 SYMLINK_DIRS=""
 EXCLUDES="*.sample lib/* install.sh *.md"

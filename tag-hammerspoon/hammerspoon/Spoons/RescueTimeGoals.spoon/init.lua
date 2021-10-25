@@ -48,7 +48,7 @@ function updateMenu()
 
   for goal_name, goal in pairs(obj.menu_goal_state) do
     if goal.checked == true then
-      title = title .. goal.menu_message.menu .. ' '
+      title = title .. goal.menu_message.menu .. '    '
     end
     table.insert(menutable, {
       title = goal.menu_message.menu_msg,
@@ -99,7 +99,7 @@ local function build_goal_response(name, sum_time)
     menu_messages.menu_msg = '❌ ' .. format_time(sum_time / 60 / 60, unit) .. ' ' .. name
   else
     -- goal pending
-    menu_messages.menu = short_name .. ": [" .. time_remaining .. "]"
+    menu_messages.menu = short_name .. ": [" .. time_remaining .. " left]"
     menu_messages.menu_msg = '⏳ ' .. format_time(sum_time / 60 / 60, unit) .. ' ' .. name
   end
 

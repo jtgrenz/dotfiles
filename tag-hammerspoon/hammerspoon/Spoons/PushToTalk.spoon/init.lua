@@ -27,7 +27,7 @@ obj.author = "Roman Khomenko <roman.dowakin@gmail.com>"
 obj.homepage = "https://github.com/Hammerspoon/Spoons"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
-obj.defaultState = 'push-to-talk'
+obj.defaultState = 'release-to-talk'
 
 obj.state = obj.defaultState
 obj.pushed = false

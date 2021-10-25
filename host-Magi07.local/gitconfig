@@ -1,0 +1,60 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[user]
+	name = JonG
+    email = 2111778+jtgrenz@users.noreply.github.com
+    signingkey = 1FBB1F2FAC6D095B
+[core]
+	excludesfile = /Users/jongrenning/.gitignore_global
+	editor = vim
+	autocrlf = input
+	hookspath = /Users/jongrenning/.githooks
+	commitGraph = true
+	hookpath = /Users/jongrenning/.dotfiles/tag-git/githooks
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[commit]
+	gpgsign = false
+[push]
+	default = current
+[gui]
+	recentrepo = /Users/jongrenning/Development/Shopify/shopify
+[diff]
+	algorithm = patience
+# [diff "encrypted"]
+#   textconv = rails encrypted:show
+#   cachetextconv = false
+[protocol]
+	version = 2
+[alias]
+	sync = !zsh -ic git-update-master
+	logname = !(git-log --name-only)
+	rename = "!rename_func() { git branch -m $@; }; rename_func"
+[url "https://github.com/Shopify/"]
+	insteadOf = git@github.com:Shopify/
+	insteadOf = git@github.com:shopify/
+	insteadOf = ssh://git@github.com/Shopify/
+	insteadOf = ssh://git@github.com/shopify/
+[gc]
+	writeCommitGraph = true
+[credential]
+	helper =
+	helper = store --file /opt/dev/var/private/git_credential_store
+[pull]
+	ff = only
+[init]
+	defaultBranch = master

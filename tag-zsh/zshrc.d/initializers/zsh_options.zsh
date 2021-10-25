@@ -35,18 +35,21 @@ setopt no_share_history             # stop sharing history between instances of 
 unsetopt share_history              # unset share_history if it was set somewhere
 
 setopt auto_cd                      # cd by typing directory name if it's not a command
-setopt correct_all                  # autocorrect commands
+setopt correct                      # autocorrect commands
 
 setopt auto_list                    # automatically list choices on ambiguous completion
 setopt auto_menu                    # automatically use menu completion
 setopt always_to_end                # move cursor to end if word had one match
+setopt emacs                        # set emacs bindings as default. I prefer vi to emacs, but I don't want vi bindings in the shell by default.
 
-zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' menu yes select # select completions with arrow keys
 zstyle ':completion:*' group-name '' # group results by category
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
 bindkey '^[[Z' reverse-menu-complete # allow shift tab to cycle backwards in completions
 
 unset zle_bracketed_paste
+
+
 
 
 #######################################

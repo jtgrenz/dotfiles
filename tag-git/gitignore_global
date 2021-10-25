@@ -6,3 +6,5 @@ tags
 Session.vim
 *.code-workspace
 .vscode/
+node_modules/
+gentoo.yml

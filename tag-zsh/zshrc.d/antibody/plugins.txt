@@ -3,3 +3,4 @@ buonomo/yarn-completion
 #bhilburn/powerlevel9k
 romkatv/powerlevel10k
 zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
