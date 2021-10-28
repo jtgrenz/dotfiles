@@ -16,17 +16,5 @@ export ZSH_CONFIG="$HOME/.zshrc.d"
 
 source "$ZSH_CONFIG/init.zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-iterm2_print_user_vars() {
-  iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
-  iterm2_set_user_var ruby_version $(echo $RUBY_VERSION)
-  iterm2_set_user_var ruby_icon $(echo "\uF219")
-}
-
-if [ -e /Users/jongrenning/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jongrenning/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#### END OF SETUP ####
+#### The following (if anything) has been automatically added by installers and should be sorted into .zshrc.d

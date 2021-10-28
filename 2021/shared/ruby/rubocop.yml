@@ -1,0 +1,10 @@
+inherit_from:
+  - https://raw.githubusercontent.com/Shopify/ruby-style-guide/main/rubocop.yml
+# AllCops:
+#   TargetRubyVersion: 2.3.3
+
+# Style/StringLiterals:
+#   EnforcedStyle: single_quotes
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false

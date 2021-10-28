@@ -23,6 +23,8 @@ if [[ $? != 0 ]] ; then
 else
     echo "Homebrew found. Updating homebrew"
     brew update
+     echo "Installing apps from Brewfile"
+    brew bundle install
 fi
 echo
 

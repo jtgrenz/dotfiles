@@ -25,5 +25,12 @@ alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
 
+# Misc
+
+alias mun='ssh jtg733@garfield.cs.mun.ca'
+alias mun-tun='ssh -D 8080 -f -C -q -N jtg733@garfield.cs.mun.ca'
+alias sub='open -a Sublime\ Text\ 2'
+
+alias zshrc='code ~/.zshrc.d/'
 
 

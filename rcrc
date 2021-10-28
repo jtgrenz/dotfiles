@@ -1,4 +1,5 @@
-DOTFILES_DIRS="$HOME/dotfiles"
-TAGS="zsh git iterm2 tmux ruby nvim vim hammerspoon keyboard colorls"
+DOTFILES_DIRS="$HOME/.dotfiles"
+TAGS="zsh git iterm2 tmux ruby vim karbiner hammerspoon"
 SYMLINK_DIRS=""
-EXCLUDES="*.sample lib/* install.sh *.md"
+UNDOTTED=""
+EXCLUDES="*.sample lib/* install.sh *.md 2021/* hooks/*"

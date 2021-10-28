@@ -44,9 +44,13 @@ if [ -d $ZSH_CONFIG/plugins ]; then
 fi
 
 # Load all host specific files
-if [ -d $ZSH_CONFIG/host ]; then
-  for file in $ZSH_CONFIG/host/**/*.zsh; do
+if [ -d $ZSH_CONFIG/host/$HOST ]; then
+  for file in $ZSH_CONFIG/host/$HOST/**/*.zsh; do
     source $file
   done
 fi
 
+## import local secrets to enviroment
+if [[ -f $ZSH_CONFIG/secrets.zsh ]]; then
+    source $ZSH_CONFIG/secrets.zsh
+fi
