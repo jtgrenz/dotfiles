@@ -1,5 +1,8 @@
+
+# http://thoughtbot.github.io/rcm/rcrc.5.html
 DOTFILES_DIRS="$HOME/.dotfiles"
-TAGS="zsh git iterm2 tmux ruby vim karbiner hammerspoon"
+TAGS="zsh git iterm2 ruby vim karbiner hammerspoon"
 SYMLINK_DIRS=""
-UNDOTTED=""
-EXCLUDES="*.sample lib/* install.sh *.md 2021/* hooks/*"
+UNDOTTED="Library"
+COPY_ALWAYS=""
+EXCLUDES="*.sample lib/* install.sh *.md hooks/*"

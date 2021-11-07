@@ -22,5 +22,3 @@ alias dlog='docker logs --tail 100'
 # source $BP_APP_ROOT/pengie-raft/zsh-plugins/bp-pengie/bp-pengie.zsh
 source $BP_APP_ROOT/pengie-raft/zsh-plugins/bp-pengie/bp-pengie-function.zsh
 source $BP_APP_ROOT/pengie-raft/zsh-plugins/bp-pengie/raft.zsh
-
-source $BP_APP_ROOT/gentoo/exe/gentoo.sh

@@ -37,7 +37,7 @@ if [[ $? != 0 ]] ; then
     echo "Thoughtbot's rcm not found. Installing rcm"
    brew install rcm
 else
-    echo "Thoughtbot's rcm  found."
+    echo "Thoughtbot's rcm found."
 fi
 echo
 
@@ -56,12 +56,6 @@ echo
 # Symlink the rcrc file manually to initialize rcm
 echo "Copying .rcrc file to $HOME"
 cp ./rcrc ~/.rcrc
-echo
-
-# Install vundle, the VIM plugin manager
-echo "Cloning/updating Vundle"
-git -C ~/.vim/bundle/Vundle.vim pull || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo
 
 # Finally, run rcup, to symlink dotfiles to home directory.

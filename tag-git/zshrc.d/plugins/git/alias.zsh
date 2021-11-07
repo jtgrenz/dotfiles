@@ -23,6 +23,9 @@ alias gcam!='gcam --no-verify'
 alias gcaa!='gcaa --no-verify'
 
 ## Open files in edited in last commit in VSCode
-alias gittrunk="git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'"
-alias gitresume="git diff origin/$(gittrunk)...HEAD --name-only | cat | xargs code"
-alias psql9.6='/usr/local/Cellar/postgresql@9.6/9.6.21/bin/psql'
+gittrunk() {
+  git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+}
+gitresume() {
+  git diff origin/$(gittrunk)...HEAD --name-only | cat | xargs code
+}

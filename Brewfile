@@ -1,0 +1,88 @@
+tap "caskroom/cask"
+tap "getantibody/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "shopify/shopify"
+tap "thoughtbot/formulae"
+
+brew "bash"
+brew "chruby"
+brew "direnv"
+brew "exa"
+brew "getantibody/tap/antibody"
+brew "gzip"
+brew "imagemagick"
+brew "imagemagick@6"
+brew "jq"
+brew "kepubify"
+brew "libffi"
+brew "libyaml"
+brew "mas" # Mac AppStore cli
+brew "memcached"
+brew "mysql", link: false
+brew "nginx"
+brew "node"
+brew "nodenv"
+brew "openssl@1.1"
+brew "pkg-config"
+brew "postgresql"
+brew "rcm"
+brew "readline"
+brew "redis"
+brew "ruby-install"
+brew "shadowenv"
+brew "shopify/shopify/ejson"
+brew "shopify/shopify/shopify-cli"
+brew "shopify/shopify/shopify-imagemagick@6", link: true
+brew "shopify/shopify/theme-check"
+brew "shopify/shopify/themekit"
+brew "tmux"
+brew "tmuxinator"
+brew "trash"
+brew "unzip"
+brew "watchman"
+brew "yarn"
+brew "zsh"
+
+## Quicklook Plugins
+# https://github.com/sindresorhus/quick-look-plugins
+brew "qlcolorcode"
+brew "qlstephen"
+brew "qlmarkdown"
+brew "quicklook-json"
+brew "qlimagesize"
+brew "quicklookase"
+cask "qlvideo"
+# https://github.com/sbarex/SourceCodeSyntaxHighlight
+cask "syntax-highlight"
+
+## Cask Apps
+cask "alfred"
+cask "google-chrome"
+cask "firefox"
+cask "ngrok"
+cask "recordit"
+cask "slack"
+cask "tunnelbear"
+cask "zoom"
+cask "bartender"
+cask "bettertouchtools"
+cask "shifty"
+cask "karabiner-elements"
+cask "hammerspoon"
+cask "pop"
+cask "spotify"
+cask "visual-studio-code"
+cask "dbeaver-community"
+cask "iterm2"
+cask "apptrap"
+cask "appcleaner"
+cask "authy"
+
+## Mac App Store
+mas "Magnet", id: 441258766
+mas "Monosnap", id: 540348655
+mas "The Unarchiver", id: 425424353
+mas "Up Next", id: 1355117041
