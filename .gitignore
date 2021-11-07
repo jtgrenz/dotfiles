@@ -2,3 +2,4 @@
 */**/secrets.zsh
 */**/.netrwhist
 tag-karbiner/config/karbiner/automatic_backups
+.DS_Store

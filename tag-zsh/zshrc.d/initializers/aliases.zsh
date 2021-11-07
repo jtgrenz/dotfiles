@@ -32,5 +32,6 @@ alias mun-tun='ssh -D 8080 -f -C -q -N jtg733@garfield.cs.mun.ca'
 alias sub='open -a Sublime\ Text\ 2'
 
 alias zshrc='code ~/.zshrc.d/'
+alias dotfiles='code ~/.dotfiles/'
 
 
