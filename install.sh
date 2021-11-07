@@ -60,12 +60,20 @@ echo
 
 # Finally, run rcup, to symlink dotfiles to home directory.
 echo "Linking dotfiles with rcup..."
-rcup
 
-if echo "$SHELL" | grep -q "zsh"; then
-    echo "zsh already active."
+# RCM tools rely on hostname which is not POSIX and does not always behave as expected on MacOS. Manually set
+# the Hostname flag to use the $HOSTNAME envvar.
+if [[ "$(uname)" == "Darwin" ]]; then
+    rcup -B $HOSTNAME
 else
-    echo "Changign shell to zsh. You will need to enter your password."
+    rcup
+fi
+
+echo
+echo "Changing shell to Zsh."
+if echo "$SHELL" | grep -q "zsh"; then
+    echo "zsh already active. Nothing to do."
+else
     chsh -s /bin/zsh
 fi
 

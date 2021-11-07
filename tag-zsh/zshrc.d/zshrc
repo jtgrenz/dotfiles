@@ -1,0 +1,20 @@
+# ZShell Configuration
+#
+# This .zshrc file is managed by the antibody plugin manager and is purposly
+# kept modular.
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+# End P10K Instant Prompt
+
+export DOTFILES="$HOME/.dotfiles"
+export ZSH_CONFIG="$HOME/.zshrc.d"
+
+source "$ZSH_CONFIG/init.zsh"
+
+#### END OF SETUP ####
+#### The following (if anything) has been automatically added by installers and should be sorted into .zshrc.d

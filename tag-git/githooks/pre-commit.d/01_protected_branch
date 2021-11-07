@@ -3,7 +3,7 @@
 module ProtectedBranch
   extend self
 
-  PROTECTED_BRANCHES = %w(master)
+  PROTECTED_BRANCHES = %w(master main development production)
   def main
     if PROTECTED_BRANCHES.include?(current_branch)
       reject!("You're about to commit to protected branch: \033[0;31m#{current_branch}\033[0m. Is that what you intended to do?")
