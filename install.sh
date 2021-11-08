@@ -53,6 +53,11 @@ else
 fi
 echo
 
+echo "Installing jtgrenz/minidev"
+mkdir -p ~/src/github.com/jtgrenz
+git clone git@github.com:jtgrenz/minidev.git ~/src/github.com/jtgrenz/
+echo
+
 # Symlink the rcrc file manually to initialize rcm
 echo "Copying .rcrc file to $HOME"
 cp ./rcrc ~/.rcrc

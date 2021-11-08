@@ -1,7 +1,7 @@
 
 # http://thoughtbot.github.io/rcm/rcrc.5.html
 DOTFILES_DIRS="$HOME/.dotfiles"
-TAGS="zsh git iterm2 ruby vim karbiner hammerspoon exa"
+TAGS="zsh git iterm2 ruby vim karbiner hammerspoon exa dev"
 SYMLINK_DIRS=""
 UNDOTTED="Library"
 COPY_ALWAYS=""
