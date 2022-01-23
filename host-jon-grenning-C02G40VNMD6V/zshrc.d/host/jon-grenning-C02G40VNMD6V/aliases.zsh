@@ -1,0 +1,1 @@
+alias OF="OVERWRITE_FIXTURES=1"

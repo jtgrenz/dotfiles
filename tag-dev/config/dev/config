@@ -1,0 +1,4 @@
+[default]
+clone_method = ssh
+src_dir = ~/src/
+git_provider = github.com

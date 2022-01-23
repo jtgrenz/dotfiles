@@ -34,7 +34,7 @@ setopt inc_append_history           # save history entries as soon as they are e
 setopt no_share_history             # stop sharing history between instances of the shell
 unsetopt share_history              # unset share_history if it was set somewhere
 
-setopt auto_cd                      # cd by typing directory name if it's not a command
+setopt autocd                       # cd by typing directory name if it's not a command
 setopt correct                      # autocorrect commands
 
 setopt auto_list                    # automatically list choices on ambiguous completion

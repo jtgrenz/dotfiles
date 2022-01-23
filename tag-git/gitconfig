@@ -3,17 +3,33 @@
 	smudge = git-media-smudge %f
 [user]
 	name = JonG
-    email = 2111778+jtgrenz@users.noreply.github.com
-    signingkey = 1FBB1F2FAC6D095B
+	email = 2111778+jtgrenz@users.noreply.github.com
+	signingkey = C29D825A205B479C
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
 	autocrlf = input
 	hookspath = ~/.githooks
 	commitGraph = true
-	hookpath = ~/.dotfiles/tag-git/githooks
+	hookpath = /Users/jon.grenning/.dotfiles/tag-git/githooks
+[push]
+	default = current
+[diff]
+	algorithm = patience
+[protocol]
+	version = 2
 [alias]
 	sync = !zsh -ic git-update-master
 	logname = !(git-log --name-only)
 	rename = "!rename_func() { git branch -m $@; }; rename_func"
 	resume = !zsh -ic "gitresume"
+[pull]
+	ff = only
+[include]
+	path = "~/.config/git/host.gitconfig"
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[maintenance]
+	repo = /Users/jon.grenning/workspace/zenpayroll

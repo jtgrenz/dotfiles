@@ -4,8 +4,8 @@ alias gst='git status'
 alias gco='git checkout'
 
 ## git-pull
-alias gpull='git pull origin $(git_current_branch)'
-alias gpl='gpull'
+alias gpl='git pull origin $(git_current_branch)'
+alias gpla='git pull'
 
 ## git-push
 alias gpp='git push origin $(git_current_branch)'
@@ -29,3 +29,7 @@ gittrunk() {
 gitresume() {
   git diff origin/$(gittrunk)...HEAD --name-only | cat | xargs code
 }
+
+# alias gst to gs which is part of SCMbreeze plugin.
+# find a better way to isolate this to the plugin settingsw
+alias gst=gs

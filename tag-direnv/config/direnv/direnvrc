@@ -1,0 +1,13 @@
+export POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+use_ejson2env() {
+  if type ejson2env > /dev/null; then
+    local ejsonfile
+    ejsonfile="${1}"
+
+    eval $(ejson2env "$ejsonfile")
+  else
+   echo "\033[0;31;240m ejson2env not found. Use brew install ejson2env\033[0m"
+  fi
+}
+

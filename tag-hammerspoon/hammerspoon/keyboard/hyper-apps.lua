@@ -8,11 +8,15 @@ local openRescueTime = function ()
   hs.application.open('RescueTimeDashboard')
 end
 
+local fixZoomVideo = function ()
+  hs.application.open('Fix Zoom')
+end
+
 
 return {
   { 'a', 'Spotify' },            -- "A" for "Audio"
   { 'm', 'Spotify' },            -- "M" for "Music"
-  { 'w', 'Google Chrome' },             -- "W" for "Web"
+  { 'w', 'Google Chrome' },      -- "W" for "Web"
   { 'b', 'Firefox' },            -- "B" for "Browser"
   { 's', 'Slack' },              -- "S" for "Station/Slack"
   { 'e', 'Code' },               -- "E" for "Editor"
@@ -20,8 +24,11 @@ return {
   { 'f', 'Finder' },             -- "F" fo  r "Finder"
   { 'c', 'Messages' },           -- "C" for "Chat"
   { 't', 'iTerm2' },             -- "T" for "Terminal"
-  { 'p', 'Focus To-Do' },        -- "P" for "Pomodoro"
+  { 'p', 'Pop' },                -- "P" for "Pop"
+  { 'z', 'zoom.us' },            -- "Z" for "Zoom"
+  { 'o', 'Obsidian' },           -- "O" for Obsidian
   { 'r',  openRescueTime},
+  { '-', fixZoomVideo },          -- Opens photobooth and quits to fix zoom video
 
   { '2', 'iTerm2' },
   { '`', 'iTerm2' },

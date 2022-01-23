@@ -2,14 +2,12 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [user]
-	name = JonG
-    email = 2111778+jtgrenz@users.noreply.github.com
-    signingkey = 1FBB1F2FAC6D095B
+	name = Jon G
+	email = 2111778+jtgrenz@users.noreply.github.com
 [core]
 	excludesfile = /Users/jongrenning/.gitignore_global
 	editor = vim
 	autocrlf = input
-	hookspath = /Users/jongrenning/.githooks
 	commitGraph = true
 	hookpath = /Users/jongrenning/.dotfiles/tag-git/githooks
 [difftool "sourcetree"]
@@ -35,9 +33,6 @@
 	recentrepo = /Users/jongrenning/Development/Shopify/shopify
 [diff]
 	algorithm = patience
-# [diff "encrypted"]
-#   textconv = rails encrypted:show
-#   cachetextconv = false
 [protocol]
 	version = 2
 [alias]

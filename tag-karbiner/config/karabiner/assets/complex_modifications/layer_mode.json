@@ -1,0 +1,24 @@
+{
+  "title": "Layer Mode",
+  "rules": [
+    {
+      "description": "Enable Layer 1 for while held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+          },
+          "to_if_held_down": [
+            {
+              "set_variable": {
+                "name": "SpaceFN",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

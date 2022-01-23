@@ -8,6 +8,7 @@ obj.__index = obj
 obj.name = "RescueTimeGoals"
 obj.version = "0.1"
 obj.menu_goal_state = {}
+obj.show_goal_by_default = false
 
 local config = {}
 config.interval = 1800
@@ -26,7 +27,6 @@ local function deepCopy(original)
 end
 
 
-
 local function openRescueTime()
   local rect = hs.geometry.rect(900, 200, 1000, 1000)
   webview = hs.webview.newBrowser(rect):url("https://www.rescuetime.com/browse/goals/by/day"):show()
@@ -37,6 +37,20 @@ local function toggleShowInMenuBar(_keyboardMods, item)
     obj.menu_goal_state[item.goal_name].checked = false
   else
     obj.menu_goal_state[item.goal_name].checked = true
+  end
+  updateMenu()
+end
+
+function hideAll()
+  for goal_name, goal in pairs(obj.menu_goal_state) do
+    obj.menu_goal_state[goal_name].checked = false
+  end
+  updateMenu()
+end
+
+function showAll()
+  for goal_name, goal in pairs(obj.menu_goal_state) do
+    obj.menu_goal_state[goal_name].checked = true
   end
   updateMenu()
 end
@@ -124,7 +138,7 @@ local function onResponse(status, body)
       obj.menu_goal_state[goal.name].menu_message = menu_message
     else
       obj.menu_goal_state[goal.name] = {
-        checked = true,
+        checked = obj.show_goal_by_default,
         menu_message = menu_message
       }
     end
@@ -151,7 +165,9 @@ function obj:start()
   local interval = config.interval or 60
   self.menutable = {
     { title = "Open RescueTime", fn = openRescueTime },
-    { title = "Refresh", fn = refresh }
+    { title = "Refresh", fn = refresh },
+    { title = "Hide All", fn = hideAll },
+    { title = "Show All", fn = showAll }
   }
 
 	self.fetchUrl = 'https://www.rescuetime.com/browse/goals/by/day.json'

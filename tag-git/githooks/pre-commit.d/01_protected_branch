@@ -2,8 +2,8 @@
 
 module ProtectedBranch
   extend self
-
-  PROTECTED_BRANCHES = %w(master main development production)
+  DEFAULT_BRANCHES = 'master main development production'
+  PROTECTED_BRANCHES = ENV.fetch('GIT_PROTECTED_BRANCHES', DEFAULT_BRANCHES ).split(' ')
   def main
     if PROTECTED_BRANCHES.include?(current_branch)
       reject!("You're about to commit to protected branch: \033[0;31m#{current_branch}\033[0m. Is that what you intended to do?")
@@ -13,9 +13,7 @@ module ProtectedBranch
   private
 
   def current_branch
-    branches = `git branch --no-color`.split(/\n/)
-    current = branches.select{ |b| b =~ /\s*\*/ }.first
-    current.gsub(/[\*\s]/, "")
+    `git branch --show-current`.chomp
   end
 
   def reject!(message)
