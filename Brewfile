@@ -22,7 +22,6 @@ brew "exa"
 brew "getantibody/tap/antibody"
 brew "gzip"
 brew "jq"
-brew "kepubify"
 brew "libffi"
 brew "libyaml"
 brew "mas" # Mac AppStore cli
@@ -37,11 +36,8 @@ brew "readline"
 brew "redis"
 brew "ripgrep"
 brew "ruby-install"
-brew "shadowenv"
+brew "shellcheck"
 brew "shopify/shopify/ejson"
-brew "shopify/shopify/shopify-cli"
-brew "shopify/shopify/theme-check"
-brew "shopify/shopify/themekit"
 brew "tmux"
 brew "tmuxinator"
 brew "trash"
@@ -49,6 +45,7 @@ brew "unzip"
 brew "watchman"
 brew "yarn"
 brew "zsh"
+
 ## Quicklook Plugins
 # https://github.com/sindresorhus/quick-look-plugins
 cask "qlcolorcode"
@@ -89,3 +86,5 @@ mas "Magnet", id: 441258766
 mas "Monosnap", id: 540348655
 mas "The Unarchiver", id: 425424353
 mas "Up Next", id: 1355117041
+mas "MeetingBar", id: 1532419400
+mas "1Password 7 - Password Manager", id: 1333542190

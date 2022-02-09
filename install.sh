@@ -23,9 +23,10 @@ if [[ $? != 0 ]] ; then
 else
     echo "Homebrew found. Updating homebrew"
     brew update
-     echo "Installing apps from Brewfile"
-    brew bundle install
 fi
+
+echo "Installing apps from Brewfile"
+brew bundle install
 echo
 
 # Install RCM, Thoughtbot's dotfiles manager.
@@ -80,6 +81,12 @@ if echo "$SHELL" | grep -q "zsh"; then
     echo "zsh already active. Nothing to do."
 else
     chsh -s /bin/zsh
+fi
+
+
+if [[ -f "./host-$HOST/post_install_hook/installer.sh" ]]; then
+   echo "Installing host specific configurations"
+   sh ./host-$HOST/post_install_hook/installer.sh
 fi
 
 echo "Install complete. Open a new shell to reload"

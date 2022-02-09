@@ -1,0 +1,2 @@
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir custom_gusto_vpn_status vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time time chruby node_version pyenv context background_jobs custom_tmux)

@@ -12,12 +12,14 @@ EXCLUDES="
   hooks/*
   */install/*
   docs/
+  Brewfile
 "
 TAGS="
   zsh
   git
   iterm2
   ruby
+  node
   vim
   karbiner
   hammerspoon

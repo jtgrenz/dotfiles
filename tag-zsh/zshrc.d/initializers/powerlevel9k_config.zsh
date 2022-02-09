@@ -6,7 +6,7 @@
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir custom_gusto_vpn_status vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time time chruby node_version pyenv context background_jobs custom_tmux)
 # Context
 DEFAULT_USER=$USER
@@ -86,13 +86,3 @@ POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
 
-# Gusto VPN
-gusto_vpn_status() {
-  local vpn_status="$(gusto-vpn state | grep "state: Connected" | head -1)"
-  if [ "$vpn_status" != "" ]; then
-    echo -n "%F{green}VPN"
-  fi
-}
-
-POWERLEVEL9K_CUSTOM_GUSTO_VPN_STATUS="gusto_vpn_status"
-POWERLEVEL9K_CUSTOM_GUSTO_VPN_STATUS_BACKGROUND="clear"

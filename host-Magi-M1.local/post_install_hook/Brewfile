@@ -1,0 +1,7 @@
+tap "shopify/shopify"
+
+brew "kepubify"
+brew "shadowenv"
+brew "shopify/shopify/shopify-cli"
+brew "shopify/shopify/theme-check"
+brew "shopify/shopify/themekit"

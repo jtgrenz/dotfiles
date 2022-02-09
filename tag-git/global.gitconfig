@@ -5,13 +5,15 @@
 	name = JonG
 	email = 2111778+jtgrenz@users.noreply.github.com
 	signingkey = C29D825A205B479C
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
 	autocrlf = input
-	hookspath = ~/.githooks
 	commitGraph = true
-	hookpath = /Users/jon.grenning/.dotfiles/tag-git/githooks
 [push]
 	default = current
 [diff]
@@ -27,9 +29,4 @@
 	ff = only
 [include]
 	path = "~/.config/git/host.gitconfig"
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg
-[maintenance]
-	repo = /Users/jon.grenning/workspace/zenpayroll
+
