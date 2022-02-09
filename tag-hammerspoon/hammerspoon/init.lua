@@ -3,8 +3,8 @@ require('keyboard') -- Load Hammerspoon bits from https://github.com/jasonrudolp
 local pushToTalk = hs.loadSpoon("PushToTalk")
 pushToTalk:start()
 
-local rescueTimeGoals = hs.loadSpoon("RescueTimeGoals")
-rescueTimeGoals:start()
+-- local rescueTimeGoals = hs.loadSpoon("RescueTimeGoals")
+-- rescueTimeGoals:start()
 
 -- --------------------------------
 -- -- START VIM CONFIG
