@@ -12,7 +12,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
-	autocrlf = input
 	commitGraph = true
 [push]
 	default = current
@@ -27,6 +26,6 @@
 	resume = !zsh -ic "gitresume"
 [pull]
 	ff = only
-[include]
+[include]w
 	path = "~/.config/git/host.gitconfig"
 

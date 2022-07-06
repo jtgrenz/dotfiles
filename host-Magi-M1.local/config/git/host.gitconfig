@@ -3,4 +3,4 @@
 [init]
 	defaultBranch = main
 [core]
-	hookpath = /Users/jon.grenning/.dotfiles/tag-git/githooks
+	hookspath = /Users/jon.grenning/.dotfiles/tag-git/githooks

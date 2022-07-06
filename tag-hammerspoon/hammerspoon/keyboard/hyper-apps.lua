@@ -20,13 +20,14 @@ return {
   { 'b', 'Firefox' },            -- "B" for "Browser"
   { 's', 'Slack' },              -- "S" for "Station/Slack"
   { 'e', 'Code' },               -- "E" for "Editor"
-  { 'v', 'Code' },               -- "V" for "Visual Studio"
+  { 'v', 'Neovide' },            -- "V" for "Vim"
   { 'f', 'Finder' },             -- "F" fo  r "Finder"
   { 'c', 'Messages' },           -- "C" for "Chat"
   { 't', 'iTerm2' },             -- "T" for "Terminal"
   { 'p', 'Pop' },                -- "P" for "Pop"
   { 'z', 'zoom.us' },            -- "Z" for "Zoom"
   { 'o', 'Obsidian' },           -- "O" for Obsidian
+  { 'n', 'Notion' },             -- "N" for Notion
   { 'r',  openRescueTime},
   { '-', fixZoomVideo },          -- Opens photobooth and quits to fix zoom video
 

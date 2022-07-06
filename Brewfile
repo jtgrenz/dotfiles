@@ -1,7 +1,5 @@
-tap "getantibody/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "shopify/shopify"
 tap "thoughtbot/formulae"

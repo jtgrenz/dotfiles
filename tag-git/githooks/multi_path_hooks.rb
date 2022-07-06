@@ -38,7 +38,9 @@ module MultiPathHooks
   CURRENT_HOOK = File.basename(__FILE__)
   GLOBAL_HOOKS_PATH = File.dirname(__FILE__)
   GLOBAL_CURRENT_HOOK_SUBHOOK_PATH = GLOBAL_HOOKS_PATH + '/' + CURRENT_HOOK + '.d'
-  LOCAL_HOOK_PATH = File.join([Dir.pwd, '.git', 'hooks', CURRENT_HOOK])
+  # LOCAL_HOOK_PATH = File.join([Dir.pwd, '.git', 'hooks', CURRENT_HOOK])
+  LOCAL_HOOKS_DIR = `git config --local core.hookspath`.chomp
+  LOCAL_HOOK_PATH = File.join([Dir.pwd, LOCAL_HOOKS_DIR, CURRENT_HOOK])
 
   def main
     run_global_hooks if Dir.exist?(GLOBAL_CURRENT_HOOK_SUBHOOK_PATH)

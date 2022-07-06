@@ -7,9 +7,8 @@
 [core]
 	excludesfile = /Users/jongrenning/.gitignore_global
 	editor = vim
-	autocrlf = input
 	commitGraph = true
-	hookpath = /Users/jongrenning/.dotfiles/tag-git/githooks
+	hookspath = /Users/jongrenning/.dotfiles/tag-git/githooks
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
