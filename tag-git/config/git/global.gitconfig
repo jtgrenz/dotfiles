@@ -11,7 +11,7 @@
 	program = gpg
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = vim
+	editor = nvim
 	commitGraph = true
 [push]
 	default = current
@@ -26,6 +26,6 @@
 	resume = !zsh -ic "gitresume"
 [pull]
 	ff = only
-[include]w
+[include]
 	path = "~/.config/git/host.gitconfig"
 

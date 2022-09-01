@@ -59,3 +59,4 @@ unset zle_bracketed_paste
 export LESS='-g -i -M -R -S -w -z-4' # allow scrolling with mouse in less
 
 ZSH_AUTOSUGGEST_USE_ASYNC=true
+export PATH=$PATH:$HOME/.local/bin
