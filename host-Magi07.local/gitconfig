@@ -9,6 +9,7 @@
 	editor = vim
 	commitGraph = true
 	hookspath = /Users/jongrenning/.dotfiles/tag-git/githooks
+	hookpath = /Users/jongrenning/.dotfiles/tag-git/githooks
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -50,5 +51,3 @@
 	helper = store --file /opt/dev/var/private/git_credential_store
 [pull]
 	ff = only
-[init]
-	defaultBranch = master

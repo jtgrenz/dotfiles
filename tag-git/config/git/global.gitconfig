@@ -28,4 +28,5 @@
 	ff = only
 [include]
 	path = "~/.config/git/host.gitconfig"
-
+[init]
+	defaultBranch = main
