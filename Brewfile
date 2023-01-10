@@ -57,6 +57,7 @@ cask "qlvideo"
 cask "syntax-highlight"
 
 ## Cask Apps
+cask "1password"
 cask "alfred"
 cask "appcleaner"
 cask "apptrap"
@@ -85,4 +86,4 @@ mas "Monosnap", id: 540348655
 mas "The Unarchiver", id: 425424353
 mas "Up Next", id: 1355117041
 mas "MeetingBar", id: 1532419400
-mas "1Password 7 - Password Manager", id: 1333542190
+# mas "1Password 7 - Password Manager", id: 1333542190
