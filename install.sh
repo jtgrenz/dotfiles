@@ -19,7 +19,7 @@ which -s brew
 if [[ $? != 0 ]] ; then
     # Install Homebrew
     echo "Homebrew not found. Installing homebrew"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo "Homebrew found. Updating homebrew"
     brew update
@@ -68,9 +68,15 @@ echo
 echo "Linking dotfiles with rcup..."
 
 # RCM tools rely on hostname which is not POSIX and does not always behave as expected on MacOS. Manually set
-# the Hostname flag to use the $HOSTNAME envvar.
-if [[ "$(uname)" == "Darwin" ]]; then
-    rcup -B $HOSTNAME
+# the Hostname flag to use the $HOSTNAME or $HOST envvar depending which is set.
+if [ "$(uname)" = "Darwin" ]; then
+    if [ -n "${HOSTNAME}" ]; then
+        HOST_TARGET="${HOSTNAME}"
+    elif  [ -n "${HOST}" ]; then
+        HOST_TARGET="${HOST}"
+    fi
+
+    rcup -B "$HOST_TARGET"
 else
     rcup
 fi

@@ -1,0 +1,7 @@
+[user]
+	name = Jon Grenning
+	email = jon.grenning@ext.chime.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[commit]
+	gpgsign = true

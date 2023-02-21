@@ -1,0 +1,17 @@
+[include]
+	path = "~/.config/git/global.gitconfig"
+[core]
+	hookpath = /Users/jon.grenning/.dotfiles/tag-git/githooks
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[user]
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICP01Kc5zMGLbHdGmzcx19S3bbZbN78QkLofRP6YXbe4
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true

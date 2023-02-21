@@ -43,6 +43,7 @@ brew "unzip"
 brew "watchman"
 brew "yarn"
 brew "zsh"
+brew "neovim"
 
 ## Quicklook Plugins
 # https://github.com/sindresorhus/quick-look-plugins
