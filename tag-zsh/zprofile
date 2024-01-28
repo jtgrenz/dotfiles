@@ -1,0 +1,7 @@
+export ZPROFILE_CONFIG='.zprofile.d'
+
+if [ -d $ZPROFILE_CONFIG ]; then
+  for file in $ZPROFILE_CONFIG/**/*.zsh; do
+    source $file
+  done
+fi

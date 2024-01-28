@@ -1,0 +1,7 @@
+export ZSHENV_CONFIG='.zshenv.d'
+
+if [ -d $ZSHENV_CONFIG ]; then
+  for file in $ZSHENV_CONFIG/**/*.zsh; do
+    source $file
+  done
+fi

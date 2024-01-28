@@ -18,3 +18,8 @@ rcup() {
 rcdn() {
     command rcdn -B $HOST "$@"
 }
+
+# prints path with each entry on a new line
+prettypath() {
+  tr ':' '\n' <<< "$PATH"
+}
