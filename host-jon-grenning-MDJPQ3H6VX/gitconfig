@@ -1,0 +1,11 @@
+[include]
+	path = "~/.config/git/global.gitconfig"
+[core]
+	hookpath = /Users/jon.grenning/.dotfiles/tag-git/githooks
+[push]
+	default = current
+[credential]
+	helper = osxkeychain
+[user]
+	name = Jon Grenning
+	email = jon.grenning@gusto.com
