@@ -1,0 +1,4 @@
+[include]
+	path = "~/.config/git/global.gitconfig"
+[core]
+	hookpath = /Users/jongrenning/.dotfiles/tag-git/githooks

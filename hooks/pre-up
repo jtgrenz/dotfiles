@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+rcdn
+if type trash > /dev/null; then
+  echo "sending ~/.zshrc.d to trash"
+  trash ~/.zshrc.d
+  trash ~/.dotfiles/tag-zshrc.d
+fi

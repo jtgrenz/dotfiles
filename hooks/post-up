@@ -4,6 +4,8 @@ source ~/.zshrc
 # bundle and statically source all the plugins listed in $ZSH_CONFIG/antibody/plugins.txt
 antibody static
 
+ln -s ~/.zshrc.d ~/.dotfiles/tag-zshrc.d
+
 # if [ -d ~/.cron_jobs/LaunchAgents ]; then
 #   echo "Symlinking ~/.cron_jobs/LaunchAgents to ~/Library/LaunchAgents/"
 #   ln -s ~/.cron_jobs/LaunchAgents/* ~/Library/LaunchAgents/
