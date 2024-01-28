@@ -7,7 +7,7 @@
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time time chruby node_version pyenv context background_jobs custom_tmux)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time time mise context background_jobs custom_tmux)
 # Context
 DEFAULT_USER=$USER
 
@@ -86,3 +86,41 @@ POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
 
+function prompt_mise() {
+    local plugins=("${(@f)$(mise ls --current 2>/dev/null | awk '!/\(symlink\)/ && $3!="~/.tool-versions" && $3!="~/.config/mise/config.toml" {print $1, $2, $3}')}")
+    local plugin
+    for plugin in ${(k)plugins}; do
+      local parts=("${(@s/ /)plugin}")
+      local tool=${(U)parts[1]}
+      local version=${parts[2]}
+      local missing=${parts[3]}
+     if [[ "$missing"  == "(missing)" ]]; then
+          p10k segment  -r -i "${tool}_ICON" -s $tool -t "%B%U$version (missing)%b%u"
+      else
+          p10k segment -r -i "${tool}_ICON" -s $tool -t "$version"
+      fi
+    done
+  }
+
+  # Colors
+  typeset -g POWERLEVEL9K_MISE_BACKGROUND='clear'
+
+  typeset -g POWERLEVEL9K_MISE_DOTNET_CORE_FOREGROUND=5
+  typeset -g POWERLEVEL9K_MISE_ELIXIR_FOREGROUND=5
+  typeset -g POWERLEVEL9K_MISE_ERLANG_FOREGROUND=1
+  typeset -g POWERLEVEL9K_MISE_FLUTTER_FOREGROUND=4
+  typeset -g POWERLEVEL9K_MISE_GOLANG_FOREGROUND=4
+  typeset -g POWERLEVEL9K_MISE_HASKELL_FOREGROUND=3
+  typeset -g POWERLEVEL9K_MISE_JAVA_FOREGROUND=7
+  typeset -g POWERLEVEL9K_MISE_JULIA_FOREGROUND=2
+  typeset -g POWERLEVEL9K_MISE_LUA_FOREGROUND=4
+  typeset -g POWERLEVEL9K_MISE_NODE_FOREGROUND=2
+  typeset -g POWERLEVEL9K_MISE_PERL_FOREGROUND=4
+  typeset -g POWERLEVEL9K_MISE_PHP_FOREGROUND=5
+  typeset -g POWERLEVEL9K_MISE_POSTGRES_FOREGROUND=6
+  typeset -g POWERLEVEL9K_MISE_PYTHON_FOREGROUND=4
+  typeset -g POWERLEVEL9K_MISE_RUBY_FOREGROUND=1
+  typeset -g POWERLEVEL9K_MISE_RUST_FOREGROUND=208
+
+  # Substitute the default asdf prompt element
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=("${POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS[@]/asdf/mise}")
