@@ -19,7 +19,6 @@ TAGS="
   git
   iterm2
   ruby
-  node
   nvim
   vim
   karbiner
@@ -29,4 +28,7 @@ TAGS="
   bat
   direnv
   mackup
+  lazyvim
+  astrovim
+  mise
 "

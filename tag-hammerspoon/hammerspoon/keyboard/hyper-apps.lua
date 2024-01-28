@@ -14,7 +14,7 @@ end
 
 
 return {
-  { 'a', 'Spotify' },            -- "A" for "Audio"
+  { 'a', 'Arc' },                -- "A" for "Audio"
   { 'm', 'Spotify' },            -- "M" for "Music"
   { 'w', 'Google Chrome' },      -- "W" for "Web"
   { 'b', 'Firefox' },            -- "B" for "Browser"
@@ -28,9 +28,12 @@ return {
   { 'z', 'zoom.us' },            -- "Z" for "Zoom"
   { 'o', 'Obsidian' },           -- "O" for Obsidian
   { 'n', 'Notion' },             -- "N" for Notion
+  { 'l', 'Logseq' },             -- "L" for Logseq
   { 'r',  openRescueTime},
   { '-', fixZoomVideo },          -- Opens photobooth and quits to fix zoom video
 
+  { '1', 'Logseq' },
+  { '3', 'Logseq' },
   { '2', 'iTerm2' },
   { '`', 'iTerm2' },
 
