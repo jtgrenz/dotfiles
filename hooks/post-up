@@ -10,3 +10,16 @@ ln -s ~/.zshrc.d ~/.dotfiles/tag-zshrc.d
 #   echo "Symlinking ~/.cron_jobs/LaunchAgents to ~/Library/LaunchAgents/"
 #   ln -s ~/.cron_jobs/LaunchAgents/* ~/Library/LaunchAgents/
 # fi
+
+# run install script for each tag if necessary
+source ~/rcrc
+for tag in $TAGS; do
+    tag=$(echo "$tag" | tr -d '[:space:]')  # Remove leading/trailing whitespaces
+    local install_script="$DOTFILES/tag-$tag/install.sh"
+
+    if [ -f install_script ]; then
+        echo "Running $install_script"
+        sh "$install_script"
+    fi
+done
+
