@@ -16,3 +16,4 @@
 
 
 # source ~/.gusto/init.sh
+export AWS_PROFILE=payments-filings-eng-gusto-main

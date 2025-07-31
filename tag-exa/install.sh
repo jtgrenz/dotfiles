@@ -1,3 +1,3 @@
 if ! type exa > /dev/null; then
-  brew install exa
+  brew install eza
 fi

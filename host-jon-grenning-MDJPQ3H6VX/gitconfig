@@ -9,3 +9,5 @@
 [user]
 	name = Jon Grenning
 	email = jon.grenning@gusto.com
+[gpg]
+	program = /usr/local/bin/gpg

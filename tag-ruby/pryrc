@@ -10,3 +10,5 @@
     input = input ? target.eval(input) : pry_instance.last_result
     IO.popen('pbcopy', 'w') { |io| io << input }
   end
+
+  Pry.config.requires = [ 'active_support/core_ext/array']
